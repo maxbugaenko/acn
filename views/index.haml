@@ -7,11 +7,13 @@
 %article
   %h1
     Статья, которая надает вам пощечин и заставит взбодриться заставит взбодриться.
-  %p
-    %i.fa.fa-facebook-square.gray
-    %i.fa.fa-vk.gray
-    %i.fa.fa-twitter-square.gray
-    %i.fa.fa-ok-square.gray
+    .author-container
+      %img.author{:src => 'http://p.h12.co/avatar/eronkelly'}
+      %a{:href => '#'} JackyChun
+      %span.orange.bold 5+
+      %i.fa.fa-facebook
+      %i.fa.fa-vk
+      %i.fa.fa-twitter
   %img.poster{:src => 'http://uduba.com/user_data/c6dba97bfbb142c499369a1e44297f1e.jpg'}
   %p
     "Если бы вам удалось надавать под зад человеку, виновному во всех ваших неудачах, вы бу неделю не смогли сидеть"!
@@ -35,24 +37,45 @@
     %li Вы предпочитаете говорить о том, что надо бы выучить новый язык, вместо того, чтобы учить его.
     %li Вы скорее «отсидитесь» или, может быть, сделаете сложную работу завтра.
     %li Вы ненавидите свою работу, но не готовы искать новую.
-  %p.author-container
-    %img.author{:src => 'http://p.h12.co/avatar/eronkelly'}
-    %a{:href => '#'} JackyChun
-    %span.orange.bold 5+
+.container
+  .span7
+    %h1 коментарии
     %br
-    %a{:href => '#'} еще статьи автора
-    %br
-    статью прочитали 14,503 раз
-  %br
-  теги
-  %span.tag психология
-  %span.tag наука
-  %span.tag шутки
-  %span.tag цитаты
-  %span.tag подборки
-  %span.tag самопознание
-  %br
-%div{:id => "disqus_thread"}
+    .comment
+      .photo
+        %img.author{:src => 'http://p.h12.co/avatar/codrops'}
+      .body
+        Вы предпочитаете говорить о том, что надо бы выучить новый язык, вместо того, чтобы учить его.
+        .blue.small только что
+    .comment
+      .photo
+        %img.author{:src => 'http://p.h12.co/avatar/yegor256'}
+      .body
+        Эти умения и навыки появятся, только если вы рискнете всем, чтобы сделать что-то по-настоящему крутое. Вы считаете
+        .blue.small сегодня
+    .comment
+      .photo
+        %img.author{:src => 'http://p.h12.co/avatar/pgbovine'}
+      .body
+        Только если вы рискнете всем, чтобы сделать
+        .blue.small вчера
+    .comment
+      .photo
+        %img.author{:src => 'http://p.h12.co/avatar/jasongorman'}
+      .body
+        Эти умения и навыки появятся, только если вы рискнете всем, чтобы сделать что-то по-настоящему крутое. Вы считаете что-то по-настоящему крутое. Вы считаете?
+        .blue.small вчера
+    .comment
+      .photo
+        %img.author{:src => 'http://p.h12.co/avatar/eronkelly'}
+      .body
+        %textarea{:cols => '50', :rows => '4', :placeholder => 'ваш коментарий здесь'}
+        %br
+        %button{:type => 'submit'} оставить комент
+  .span1
+  .span4
+    %img{:src => url('images/ads.png')}
+%div{:id => "disqus_thread1"}
 :javascript
     var disqus_shortname = 'acn-content'; // required: replace example with your forum shortname
     (function() {
@@ -60,6 +83,7 @@
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
+%h1 подобные статьи
 %article.similars
   %ul.similar
     %li
